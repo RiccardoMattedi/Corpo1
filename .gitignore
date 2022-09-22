@@ -1,0 +1,5 @@
+*
+!*.cpp
+# La prima riga esclude tutti i file
+# La seconda permete tutti  i .cpp
+# Che quindi saranno gli unici sincronizzati
