@@ -4,11 +4,8 @@
 #include <limits.h>
 #include <cstring>
 
-
-
-
-
 using namespace std;
+
 void es1();
 void es2();
 void es3();
@@ -19,8 +16,9 @@ void es26();
 void es39();
 void es64();
 void es74();
-int main()
-{
+void clearScreen();
+
+int main(){
   
     int scelta;
     do {
@@ -106,6 +104,7 @@ int main()
 }
 
 void es1(){
+  clearScreen();
   int contaValori=10;
   cout << "quanti valori vuoi inserire?> ";
   cin >> contaValori;
@@ -122,10 +121,11 @@ void es1(){
 }
 
 void es2(){
- int contaValori=10;
+  clearScreen();
+  int contaValori=10;
   cout << "quanti valori vuoi inserire?> ";
   cin >> contaValori;
- int vettore[contaValori];
+  int vettore[contaValori];
   for(int i = 0; i < contaValori; i++){
     vettore[i] = i;
     cout << vettore[i] << endl;
@@ -134,6 +134,7 @@ void es2(){
 
 
 void es3(){
+  clearScreen();
   int contaValori=10;
   cout << "quanti valori vuoi inserire?> ";
   cin >> contaValori;
@@ -155,7 +156,7 @@ void es3(){
 } 
 
 void es4(){
-  
+  clearScreen();
   int contaValori=10;
   cout << "quanti valori vuoi inserire?> ";
   cin >> contaValori;
@@ -173,6 +174,7 @@ void es4(){
 }
 
 void es5(){
+  clearScreen();
   int N=100;
   int vettore[N];
   int somma=0;
@@ -196,10 +198,8 @@ cout<<"il loro numero è"<<i<<endl;
 
 
 void es12() {
-
+  clearScreen();
   cout << "12. Dato un vettore di N elementi al primo elemento dispari stampare quanti valori diversi da zero si sono incontrati, il numero dispari incontrato e la sua posizione nel vettore." << endl;
-
-  
   int Valori=10;
   int vect[Valori];
   int positionDispari = 0;
@@ -542,4 +542,12 @@ void es74(){
     }
   }
   cout << endl;
+}
+
+void clearScreen(){
+  if(_osplatform==2){
+    system("cls");
+  }else{
+    system("clear");
+  }
 }
