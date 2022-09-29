@@ -107,10 +107,12 @@ int main()
 
 void es1(){
   int contaValori=10;
+  cout << "quanti valori vuoi inserire?> ";
+  cin >> contaValori;
   int valori[contaValori];
   cout << "Dovrai inserire " << contaValori << " valori" << endl;
     for (int i = 0; i < contaValori; i++){
-      cout << "inserisci il " << (i+1) << "° valore" << endl;
+      cout << "inserisci il " << (i + 1) << "\u00b0 valore" << endl;
       cin >> valori[i];
     }
     for ( int i = 0; i < contaValori; i++){
@@ -121,7 +123,8 @@ void es1(){
 
 void es2(){
  int contaValori=10;
-
+  cout << "quanti valori vuoi inserire?> ";
+  cin >> contaValori;
  int vettore[contaValori];
   for(int i = 0; i < contaValori; i++){
     vettore[i] = i;
@@ -132,7 +135,8 @@ void es2(){
 
 void es3(){
   int contaValori=10;
-  
+  cout << "quanti valori vuoi inserire?> ";
+  cin >> contaValori;
   int vettore[contaValori];
   int somma = 0;
     for(int i = 0; i < contaValori; i++){
@@ -146,14 +150,15 @@ void es3(){
         for(int i = 0; i < contaValori; i++){
           cout << vettore[i] << " ";
         }
-    cout << "la somma e': " << somma << endl;
+    cout << "la somma \u00e8: " << somma << endl;
   
 } 
 
 void es4(){
   
   int contaValori=10;
-  
+  cout << "quanti valori vuoi inserire?> ";
+  cin >> contaValori;
   int vettore[contaValori];
     for (int i = 0; i < contaValori; i++){
       vettore[i] = rand() % 100 + 1;
@@ -168,8 +173,6 @@ void es4(){
 }
 
 void es5(){
-  
-
   int N=100;
   int vettore[N];
   int somma=0;
